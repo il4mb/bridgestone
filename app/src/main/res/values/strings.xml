@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">bridgestone</string>
+    <string name="no_data_yet_click_floating_button_below_to_send_new_request">No data yet, Click floating button below to send new request</string>
+    <string name="logout">Logout</string>
+    <string name="app_logo">App logo</string>
+    <string name="new_request">new request</string>
+    <string name="info_empty_list">info empty list</string>
+    <string name="bsre">BSRE</string>
+    <string name="bridgestone">BRIDGESTONE</string>
+    <string name="login_panel">Login Panel</string>
+    <string name="username">Username :</string>
+    <string name="password">Password :</string>
+    <string name="login">login</string>
+    <string name="service_request_form">Service Request Form</string>
+    <string name="select_category">Select Category</string>
+    <string name="machine_name">Machine Name</string>
+    <string name="machine_model">Machine Model</string>
+    <string name="machine_registration_number">Machine Registration Number</string>
+    <string name="client_full_name">Client Full Name</string>
+    <string name="contact">Contact</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="select_services">Select Services</string>
+    <string name="select_request_type">Select Request Type</string>
+    <string name="pick_up_address">Pick up Address</string>
+    <string name="submit">Submit</string>
+</resources>

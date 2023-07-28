@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.ui.Login.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- HEADING -->
+        <LinearLayout
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="65sp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_width="65sp"
+                    android:layout_height="65sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/bridgestone_logo_transparent"
+                    android:contentDescription="@string/app_logo" />
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bsre"
+                    android:textStyle="bold"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/bridgestone"/>
+        </LinearLayout>
+        <!-- END HEADING -->
+
+
+        <LinearLayout
+            android:id="@+id/login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="15sp"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="@string/login_panel"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_namapenguna"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:hint="@string/username">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_sandi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:hint="@string/password">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="textPassword"
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_masuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/login"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

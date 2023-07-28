@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.ui.Form.FormActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- CUSTOM TOPBAR -->
+        <LinearLayout
+            android:background="@color/dark"
+            android:gravity="center_vertical"
+            android:id="@+id/custom_topbar"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+            <FrameLayout
+                android:paddingBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/bridgestone_logo_transparent"
+                    android:contentDescription="@string/app_logo" />
+            </FrameLayout>
+            <TextView
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service_request_form"/>
+        </LinearLayout>
+        <!-- CUSTOM TOPBAR -->
+
+        <ScrollView
+            android:layout_above="@id/submit_button"
+            android:layout_below="@id/custom_topbar"
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- SELECT TYPE -->
+                <LinearLayout
+                    android:padding="14dp"
+                    android:background="@drawable/rounded"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:alpha="0.8"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_category"/>
+                    <Spinner
+                        android:id="@+id/select_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"/>
+                </LinearLayout>
+                <!-- SELECT TYPE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_machine_name"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/machine_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_machine_model"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/machine_model"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_machine_registration_number"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/machine_registration_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_client_full_name"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/client_full_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_contact"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/contact"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_email"
+                    android:layout_marginBottom="8dp"
+                    android:hint="@string/email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_address"
+                    android:layout_marginBottom="12dp"
+                    android:hint="@string/address"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="100dp"
+                        android:inputType="text|textMultiLine"
+                        android:gravity="top" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+
+                <!-- SELECT SERVICES -->
+                <LinearLayout
+                    android:padding="14dp"
+                    android:background="@drawable/rounded"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:alpha="0.8"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_services"/>
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/selected_list_services"
+                        android:minHeight="100dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:flexWrap="wrap"
+                        app:alignItems="stretch"
+                        app:alignContent="stretch"/>
+
+                </LinearLayout>
+                <!-- SELECT SERVICES -->
+
+                <!-- SELECT SERVICE TYPE -->
+                <LinearLayout
+                    android:padding="14dp"
+                    android:background="@drawable/rounded"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:alpha="0.8"
+                        android:textSize="17sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_request_type"/>
+                    <Spinner
+                        android:id="@+id/select_service_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"/>
+                </LinearLayout>
+                <!-- SELECT SERVICE TYPE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_pickup_address"
+                    android:visibility="gone"
+                    android:layout_marginBottom="12dp"
+                    android:hint="@string/pick_up_address"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="100dp"
+                        android:inputType="text|textMultiLine"
+                        android:gravity="top" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:background="@drawable/rounded"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

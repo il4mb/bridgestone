@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".app.ui.Login.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- CUSTOM TOPBAR -->
+        <LinearLayout
+            android:background="@color/dark"
+            android:gravity="center_vertical"
+            android:id="@+id/custom_topbar"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+
+            <FrameLayout
+                android:paddingBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/bridgestone_logo_transparent"
+                    android:contentDescription="@string/app_logo" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/home"
+                android:padding="3dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/baseline_home_24"
+                app:tint="#FFF"/>
+
+        </LinearLayout>
+        <!-- CUSTOM TOPBAR -->
+
+
+        <ScrollView
+            android:layout_below="@id/custom_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/login_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="15sp"
+                android:paddingTop="50dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/logout"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#FF0000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="logout"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:background="@drawable/circle"
+                    android:layout_gravity="center_horizontal"
+                    android:outlineSpotShadowColor="@color/white"
+                    app:cardCornerRadius="100dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:src="@drawable/bridgestone_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter" />
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="first name"/>
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="{FIRST_NAME}"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="last name"/>
+                    <TextView
+                        android:id="@+id/last_name"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="{LAST_NAME}"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingBottom="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="username"/>
+                    <TextView
+                        android:id="@+id/username"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="{USER_NAME}"/>
+                </LinearLayout>
+
+               <TextView
+                   android:layout_marginTop="25dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="You cannot edit your profile in this application, if you want to edit you profile please login to our website"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
